@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-base:       #0D0F12;
+    --bg-surface:    #141720;
+    --bg-elevated:   #1C2130;
+    --border:        #252B3B;
+    --border-strong: #3A4255;
+
+    --text-primary:  #E8EDF5;
+    --text-secondary:#8B95A8;
+    --text-muted:    #505A6E;
+
+    --critical:      #E55B4D;
+    --critical-bg:   #1E1211;
+    --warning:       #D4943A;
+    --warning-bg:    #1C1509;
+    --info:          #4A90C4;
+    --info-bg:       #0E1620;
+    --pass:          #4CAF7D;
+    --pass-bg:       #0D1A12;
+
+    --accent:        #5B8DEF;
+    --accent-dim:    rgba(91, 141, 239, 0.12);
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Headings / Display */
+  h1, h2, h3, .font-display {
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* Code */
+  pre, code, .font-code {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+}
+
+@layer utilities {
+  .text-xs { font-size: 11px; line-height: 16px; }
+  .text-sm { font-size: 13px; line-height: 20px; }
+  .text-base { font-size: 15px; line-height: 24px; }
+  .text-lg { font-size: 18px; line-height: 28px; }
+  .text-xl { font-size: 24px; line-height: 32px; }
+  .text-2xl { font-size: 32px; line-height: 40px; }
+}
+
+/* Base scrolling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}

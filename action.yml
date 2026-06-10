@@ -1,0 +1,16 @@
+name: 'QueryPerf Database Audit'
+description: 'Catch N+1 queries and missing indexes in Prisma code.'
+inputs:
+  schema-path:
+    description: 'Path to schema.prisma'
+    default: './prisma/schema.prisma'
+  query-glob:
+    description: 'Glob pattern for query files'
+    default: 'src/**/*.ts'
+runs:
+  using: 'composite'
+  steps:
+    - run: npm install glob
+      shell: bash
+    - run: node scripts/audit-scanner.js
+      shell: bash
