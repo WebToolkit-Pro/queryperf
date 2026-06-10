@@ -67,8 +67,8 @@ export default function Home() {
       <header className="flex items-center justify-between mb-8">
         <h1 className="text-2xl font-display font-medium text-primary tracking-tight">QueryPerf</h1>
         <div className="flex gap-4 text-sm font-mono text-secondary">
-          <a href="#" className="hover:text-primary transition-colors">Docs</a>
-          <a href="#" className="hover:text-primary transition-colors">GitHub</a>
+          <a href="https://github.com/WebToolkit-Pro/queryperf#readme" target="_blank" className="hover:text-primary transition-colors">Docs</a>
+          <a href="https://github.com/WebToolkit-Pro/queryperf" target="_blank" className="hover:text-primary transition-colors">GitHub</a>
         </div>
       </header>
 
