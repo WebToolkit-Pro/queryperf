@@ -71,3 +71,4 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-muted);
 }
+/* Force cache bust for Tailwind PostCSS compilation */
