@@ -124,7 +124,7 @@ export default function Home() {
             <button
               key={key}
               onClick={() => toggleMetric(key as keyof typeof metrics)}
-              className={\`text-xs font-mono px-2 py-1 rounded transition-colors \${enabled ? 'bg-accent-dim text-accent' : 'text-muted hover:text-secondary'}\`}
+              className={`text-xs font-mono px-2 py-1 rounded transition-colors ${enabled ? 'bg-accent-dim text-accent' : 'text-muted hover:text-secondary'}`}
             >
               [{key} {enabled ? '✓' : ' '}]
             </button>

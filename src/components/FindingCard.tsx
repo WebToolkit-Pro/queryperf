@@ -39,7 +39,7 @@ export function FindingCard({ finding }: { finding: Finding }) {
       >
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-3">
-            <span className={\`text-xs font-mono px-2 py-0.5 rounded-full border \${badgeColor}\`}>
+            <span className={`text-xs font-mono px-2 py-0.5 rounded-full border ${badgeColor}`}>
               ● {finding.severity.toUpperCase()}
             </span>
             <span className="font-mono text-primary font-medium">{finding.title}</span>

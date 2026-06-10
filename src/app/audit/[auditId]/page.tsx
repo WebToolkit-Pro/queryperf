@@ -59,7 +59,7 @@ export default async function AuditPage({ params }: { params: { auditId: string 
         </div>
         <div className="flex gap-3">
           <Link 
-            href={\`/audit/\${id}/share.md\`}
+            href={`/audit/${id}/share.md`}
             target="_blank"
             className="text-xs font-mono bg-surface border border-border text-primary px-3 py-1.5 rounded hover:bg-elevated transition-colors"
           >
@@ -68,7 +68,7 @@ export default async function AuditPage({ params }: { params: { auditId: string 
           <button 
             className="text-xs font-mono bg-accent text-bg-base px-3 py-1.5 rounded hover:shadow-[0_0_10px_rgba(91,141,239,0.3)] transition-all"
             onClick={() => {
-              const url = \`\${window.location.origin}/audit/\${id}/share.md\`;
+              const url = `${window.location.origin}/audit/${id}/share.md`;
               navigator.clipboard.writeText(url);
               alert('Markdown URL copied to clipboard! Paste it to Claude/Cursor.');
             }}

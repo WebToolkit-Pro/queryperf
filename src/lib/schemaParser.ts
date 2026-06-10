@@ -6,7 +6,7 @@ export function parsePrismaSchema(schema: string): ModelMap {
   // Extract models block by block
   const modelBlocks = schema.matchAll(/model\s+(\w+)\s+{([\s\S]*?)}/g);
   
-  for (const match of modelBlocks) {
+  for (const match of Array.from(modelBlocks)) {
     const [_, modelName, body] = match;
     const fields: Field[] = [];
     const indexes: string[][] = [];
