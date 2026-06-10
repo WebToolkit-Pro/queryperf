@@ -1,5 +1,8 @@
 name: 'QueryPerf Database Audit'
 description: 'Catch N+1 queries and missing indexes in Prisma code.'
+branding:
+  icon: 'database'
+  color: 'blue'
 inputs:
   schema-path:
     description: 'Path to schema.prisma'
